@@ -1,0 +1,1 @@
+Use the exact generated theorem header and imports, a plain proof and helper lemmas only. Remove placeholders or unsupported directives.
