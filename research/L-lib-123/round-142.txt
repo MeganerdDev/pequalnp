@@ -1,0 +1,38 @@
+artifact /workspace/Trial000142.py
+python 3.11.2
+
+=== regression: full enumeration for m=3 ===
+m=3 s=0 t=0 total_functions=1 checked=1 scheme_exists=NO
+  collision_witness: k=0 T=() x=011 y=100 summary=0
+m=3 s=0 t=1 total_functions=1 checked=1 scheme_exists=NO
+  collision_witness: k=0 T=() x=011 y=100 summary=0
+m=3 s=1 t=0 total_functions=256 checked=256 scheme_exists=NO
+  collision_witness: k=0 T=() x=011 y=100 summary=0
+m=3 s=1 t=1 total_functions=256 checked=256 scheme_exists=NO
+  collision_witness: k=0 T=() x=011 y=100 summary=0
+m=3 s=2 t=0 total_functions=65536 checked=65536 scheme_exists=NO
+  collision_witness: k=0 T=() x=011 y=100 summary=0
+m=3 s=2 t=1 total_functions=65536 checked=5311 scheme_exists=YES
+  chosen_T_per_k= [(), (2,), (1,)]
+
+=== exact search for m=4 boundary cases ===
+m=4 s=1 t=1 scheme_exists=NO
+  sample_collision_witness: k=3 T=() x=0000 y=0001 summary=forced-collision
+m=4 s=2 t=1 scheme_exists=YES
+  chosen_T_per_k= ((1,), (0,), (3,), (2,))
+  label_of_inputs= (0, 1, 1, 0, 2, 3, 3, 2, 2, 3, 3, 2, 0, 1, 1, 0)
+  verification= PASS
+m=4 s=1 t=2 scheme_exists=NO
+  sample_collision_witness: k=3 T=() x=0000 y=0001 summary=forced-collision
+
+=== positive control with s+t>=m ===
+reused exact scheme at m=4 s=2 t=1 positive_control=PASS
+  chosen_T_per_k= ((1,), (0,), (3,), (2,))
+  label_of_inputs= (0, 1, 1, 0, 2, 3, 3, 2, 2, 3, 3, 2, 0, 1, 1, 0)
+
+=== summary ===
+regression_match= PASS
+m4_boundary_expectations= PASS
+positive_boundary_found= PASS
+required_checks= PASS
+elapsed_seconds=0.438
